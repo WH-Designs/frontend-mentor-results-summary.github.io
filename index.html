@@ -1,47 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/27c02e2cfc.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
 
-  Your Result
-  76
-  of 100
+<body class="bg-gray-200 font-HankenGrotesk text-center">
+  <main class="flex justify-center -mt-9 md:mt-4">
+    <div class="flex flex-col md:flex-row justify-center translate-y-16 shadow-xl bg-white max-w-fit p-5 rounded-2xl max-h-fit">
+      <!-- Card Container -->
+      <div
+        class="flex flex-col justify-center -mr-2 max-w-full text-center px-10 bg-gradient-to-b from-indigo-600 to-indigo-700 md:-mt-5 md:-mb-5 md:-ml-5 rounded-2xl text-white pb-7 pt-5">
+        <!-- Card 1 -->
+        <h2 class="pb-1 text-[13px] opacity-70 font-semibold">Your Result</h2>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+        <span class="pb-4"></span>
 
-  Reaction
-  80 / 100
+        <div class="bg-gradient-to-b from-indigo-700 to-indigo-600 rounded-full max-w-fit p-8 self-center">
+          <!-- Score -->
+          <h1 class="text-6xl font-bold px-4 pb-1 pt-1">76</h1>
+          <p class="text-xs px-4 font-light pb-2">of 100</p>
+        </div>
+        
+        <span class="pb-6"></span>
 
-  Memory
-  92 / 100
+        <h1 class="pt-3 pb-4 font-[600] text-2xl">Great</h1>
+        <p class="text-xs font-normal opacity-70">You scored higher than 65% of <br> the people who have taken <br>
+          these tests.</p>
+      </div>
 
-  Verbal
-  61 / 100
+      <div class="flex flex-col justify-start max-w-fit mt-8 md:pl-8 md:mt-6 m:pl-7"> <!-- Card 2 -->
+        <h1 class="text-start pb-4 pt-1 text-gray-900 font-bold">Summary</h1>
 
-  Visual
-  72 / 100
+        <div class="flex flex-row max-w-fit bg-red-200 bg-opacity-30 p-3 rounded-lg"> <!-- Reaction -->
+          <i class="fa-solid fa-bolt text-red-400 pt-1 pr-2"></i>
+          <h3 class="pr-16 text-red-400 font-bold">Reaction</h3>
+          <p><strong>80</strong> <span class="opacity-40">/ 100</span></p>
+        </div>
 
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <span class="p-[0.40rem]"></span>
+
+        <div class="flex flex-row max-w-fit bg-yellow-200 bg-opacity-30 p-3 rounded-lg"> <!-- Memory -->
+          <i class="fa-solid fa-brain text-yellow-400 pt-1 pr-2"></i>
+          <h3 class="pr-16 text-yellow-400 font-bold">Memory</h3>
+          <p> <strong>92</strong> <span class="opacity-40">/ 100</span></p>
+        </div>
+
+        <span class="p-[0.40rem]"></span>
+
+        <div class="flex flex-row max-w-fit bg-green-200 bg-opacity-30 p-3 rounded-lg"> <!-- Verbal -->
+          <i class="fa-solid fa-comment-dots text-green-400 pt-1 pr-2"></i>
+          <h3 class="pr-20 text-green-400 font-bold">Verbal</h3>
+          <p><strong>61</strong> <span class="opacity-40">/ 100</span></p>
+        </div>
+
+        <span class="p-[0.40rem]"></span>
+
+        <div class="flex flex-row max-w-fit bg-indigo-200 bg-opacity-30 p-3 rounded-lg"> <!-- Visual -->
+          <i class="fa-solid fa-eye text-indigo-400 pt-1 pr-2"></i>
+          <h3 class="pr-[5.1rem] text-indigo-400 font-bold">Visual</h3>
+          <p><strong>72</strong> <span class="opacity-40">/ 100</span></p>
+        </div>
+
+        <span class="p-3"></span>
+
+        <button class="bg-gray-800 text-white py-3 text-sm rounded-2xl">Continue</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="flex justify-center bottom-0 fixed">
+    <div class="attribution w-screen">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://wh-designs.github.io/">Wyatt Haak</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
